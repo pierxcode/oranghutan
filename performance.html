@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Performance</title>
+</head>
+<body>
+<header> 
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/assets/images/supa logo.svg" alt="Logo" class="logo-img">
+      <h3 class="logo-text">Aandelen.io</h3>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Deelnemers</a></li>
+        <li><a href="performance.html">Performance</a></li>
+        <!-- <li><a href="waarde.html">Waarde</a></li>
+        <li><a href="dividend.html">Dividend</a></li>
+        <li><a href="roadmap.html">Roadmap</a></li> -->
+      </ul>
+      <button id="mode-toggle" class="dark-mode">
+        <img src="/assets/images/sun.svg" alt="Switch to Light Mode" class="mode-icon">
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="content-container" id="first">
+  <section class="container">
+    <!-- HTML for the chart -->
+    <canvas id="myChart"></canvas>
+
+    <div id="form2">
+      <select id="input" class="select-input">
+        <option value="">Kies de maand</option>
+        <option value="Jan">Jan</option>
+        <option value="Feb">Feb</option>
+        <option value="Mar">Mar</option>
+        <option value="Apr">Apr</option>
+        <option value="May">May</option>
+        <option value="Jun">Jun</option>
+        <option value="Jul">Jul</option>
+        <option value="Aug">Aug</option>
+        <option value="Sep">Sep</option>
+        <option value="Oct">Oct</option>
+        <option value="Nov">Nov</option>
+        <option value="Dec">Dec</option>
+      </select>
+      <input type="number" id="punten" placeholder="Omzet">
+      <button id="submit">OK</button>
+    </div>
+
+    <div class="table-container">
+      <table id="logTable">
+        <thead>
+          <tr>
+            <th>Maand</th>
+            <th>Omzet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rijen zullen dynamisch worden ingevoegd hier via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<script src="performance.js"></script>
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

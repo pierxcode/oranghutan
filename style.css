@@ -1,0 +1,308 @@
+/* Dark mode thema */
+:root {
+  --background-color: #09090b;
+  --text-color: #f1f1f1;
+  --secondary-text-color: #272729;
+  --table-background: #09090b;
+  --table-border-color: #272729;
+  --table-hover-background: #3e3e3e;
+  --input-background-color: #09090b;
+  --button-background-color: #232323;
+  --input-border-color: #272729;
+  --punten-border-color: #272729;
+  --button-border-color: #3ecf8e4d;
+  --button-background-color: #34d399;
+  --button-color: #fff;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
+  --gray-50: #f3f4f6;
+}
+
+/* primary, secondary, tertiary */
+
+/* Standaard (light mode) thema */
+.light-mode {
+  --background-color: #ffffff;
+  --text-color: #111;
+  --table-background: #ffff;
+  --table-border: #3c3c3c;
+  --table-hover-background: #f1f1f1;
+  --input-border-color: #3c3c3c;
+  --punten-border-color: #3c3c3c;
+  --button-border-color: #009451;
+  --button-background-color: #43ffaa;
+  --button-color: #004828;
+}
+
+.light-mode #input, .light-mode #punten {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+#form {
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+}
+
+/* Stijl voor de header met navigatiebalk */
+header {
+  color: #000; /* Tekstkleur van de header */
+  margin: 0px 50px; /* Binnenste vulling van de header */
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Stijl voor de navigatiebalk */
+.navbar {
+  background-color: transparent;
+  color: var(--text-color);
+  display: flex; /* Gebruik flexbox voor layout */
+  align-items: center ; /* Centreer items verticaal */
+  justify-content: space-between; /* Verdeel ruimte tussen items */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; 
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Stijl voor de logo container */
+.logo h3 {
+  margin: 0; /* Verwijder standaardmarges van h2 */
+  font-size: 18px; /* Lettergrootte van de logo tekst */
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.logo-img {
+  width: 32px; /* Pas de grootte van de afbeelding aan naar wens */
+  height: 32px; /* Pas de grootte van de afbeelding aan naar wens */
+  margin-right: 2px; /* Ruimte tussen afbeelding en tekst */
+}
+
+/* Stijl voor de navigatielinks */
+.nav-links {
+  list-style-type: none; /* Verwijder standaard lijststijl */
+  display: flex; /* Gebruik flexbox voor layout */
+}
+
+/* Stijl voor de navigatielink items */
+.nav-links li {
+  margin-right: 15px; /* Ruimte tussen link items */
+}
+
+.nav-links li a {
+  color: var(--gray-500); /* Standaard kleur voor menu-items */
+  text-decoration: none; /* Verwijder onderstreping van links */
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--gray-400); /* Kleur voor menu-items bij hover */
+}
+
+.nav-links li a.selected {
+  color: var(--gray-50); /* Kleur voor geselecteerde menu-items */
+}
+
+.content-container {
+  display: flex;
+  justify-content: center; /* Centreer de inhoud horizontaal */
+  align-items: center; /* Centreer de inhoud verticaal */
+}
+
+.table-container {
+  display: none;
+  border: 0.5px solid var(--table-border-color);
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.table-container.visible {
+  display: block;
+  width: 100%;
+}
+
+#logTable {
+  background-color: var(--table-background);
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 12px;
+  overflow: hidden; /* Ensure the rounded corners are visible */
+  padding: 20px;
+  border-collapse: collapse;
+}
+
+#logTable thead th {
+  font-weight: 600;
+  padding: 16px;
+  border-bottom: 0.5px solid var(--table-border-color);
+}
+
+#logTable tbody tr {
+  transition: background-color 0.3s, border-color 0.3s;
+  border-bottom: 0.5px solid var(--table-border-color);
+}
+
+#logTable tbody tr:hover {
+  background-color: var(--table-hover-background);
+}
+
+#logTable tbody td {
+  padding: 0px 16px;
+  border: none; /* Remove vertical borders */
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+#logTable tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border from the last row */
+}
+
+
+#input, #punten {
+  padding-left: 10px;
+  margin-right: 10px;
+  height: 40px;
+  font-size: 18px;
+  border: 0.6px solid;
+  color: var(--text-color);
+  border-color: var(--input-border-color);
+  background-color: var(--input-background-color);
+  border-radius: 8px;
+}
+
+#submit {
+  height: 45px;
+  width: 60px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: var(--button-border-color);
+  color: var(--text-color);
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+  cursor: pointer;
+}
+
+#enter {
+  display: flex;
+  align-items: center;
+}
+
+#enter button {
+  margin-right: 10px; /* Ruimte tussen de knop en de tekst */
+}
+
+#enter p {
+  margin: 0; /* Verwijder standaardmarges van de tekst */
+  font-size: 12px;
+}
+
+#press {
+  color: var(--text-color);
+}
+
+.mode-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#mode-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+#logTable tbody tr:hover {
+  margin-top: 24px;
+  background-color: rgba(0, 0, 0, 0.050);
+  border-bottom: 1px solid;
+  margin: 0px;
+  transition: 75ms ease;
+}
+
+#logTable tbody td {
+  margin-top: 20px;
+  text-align: left;
+  vertical-align: middle;
+  height: 50px;
+  font-size: 16px;
+}
+
+#first {
+  padding: 100px 50px;
+  /* background-color: red; */
+}
+
+#second {
+  padding: 20px 100px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#myChart {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 50px;
+  width: 800px;
+}
+
+#chart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+#chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#form1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#form2 {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#donut-chart-container {
+  text-align: center;
+}
+
+.select-input {
+  min-width: 200px;
+}
